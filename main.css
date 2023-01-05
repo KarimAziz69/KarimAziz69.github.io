@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+:root {
+    --main-color: #00C9A6;
+    --second-color: #27242B;
+    --third-color: #545058;
+    --fourth-color: #FAEAFF;
+    --gap: 20px;
+    --num-cols: 2;
+    --row-height: 400px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--second-color);
+    font-family: 'Roboto', sans-serif;
+}
+.nav-bar {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    display: flex;
+    position: fixed;
+    padding: 15px;
+    /* background-color: var(--second-color); */
+    width: 100%;
+    height: 60px;
+    z-index: 1030;
+}
+.active {
+    border-bottom: 1px solid var(--fourth-color);
+}
+.logo {
+    position: relative;
+    bottom: 4px;
+    height: 40px;
+    display: inline-block;
+    background-color: var(--fourth-color);
+    transition: .2s;
+}
+.logo img {
+    width: 50px;
+}
+.logo:hover {
+    opacity: .5;
+}
+.nav-bar .links li {
+    padding: 7px;
+    display: inline-block;
+    justify-content: space-around;
+}
+.nav-bar .links {
+    left: 30px;
+    position: relative;
+    /* margin: 10px 0; */
+}
+.nav-bar .links li a {
+    list-style: none;
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 0 15px 0 15px;
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-weight: 700;
+    transition: .2s ease-in-out;
+}
+
+.nav-bar .links li:hover a {
+    color: #00c9a7b9;
+}
+
+#home {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 500px;
+    background-color: var(--third-color);
+    z-index: 1;
+}
+
+.img{
+    background-image: url(../imgs/Dustin+vs+Claudio_.jpg);
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(33, 31, 35, 0.569);
+    z-index: 3;
+}
+
+
+.titles h1 {
+    position: absolute;
+    font-size: 100px;
+    font-style: italic;
+    color: var(--main-color);
+    z-index: 4;
+    text-align: center;
+    top: 0;
+    left: 170px;
+    margin: 155px 0;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+/* start Button styling */
+.btn-link1 {
+    position: absolute;
+    left: 297px;
+    bottom: 208px;
+    text-decoration: none;
+}
+.btn-link1 a{
+    position: absolute;
+    width: 0;
+    text-decoration: none;
+
+}
+.button-86 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: var(--third-color);
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+
+.button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: var(--fourth-color);
+    border-radius: 10px;
+}
+
+.button-86::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+
+.button-86:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+    background-color: var(--main-color);
+}
+.button-86:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.button-86:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+.btn-link1 a span {
+    font-weight: bold;
+    transition: all .3s ease-in 0s;
+}
+.btn-link1:hover a span {
+    /* font-weight: bold; */
+    color: black;
+}
+.btn-link1:hover .fa-instagram {
+    color: black;
+}
+.fa-instagram {
+    /* font-weight: bold; */
+    color: rgb(120, 5, 221);
+    margin: 5px;
+    transition: all .3s ease-in 0s;
+}
+/* end Button instagram styling */
+
+/* start Button linked in styling */
+.btn-link2 {
+    position: absolute;
+    left: 575px;
+    bottom: 208px;
+    text-decoration: none;
+}
+.btn-link2 a{
+    position: absolute;
+    width: 0;
+    text-decoration: none;
+
+}
+.button-87 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: var(--third-color);
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-87::after,
+.button-87::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+
+.button-87::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: var(--fourth-color);
+    border-radius: 10px;
+}
+
+.button-87::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+
+.button-87:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+    background-color: var(--main-color);
+}
+
+.button-87:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.button-87:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+.btn-link2 a span {
+    font-weight: bold;
+    transition: all .3s ease-in 0s;
+}
+.btn-link2:hover a span {
+    /* font-weight: bold; */
+    color: black;
+}
+.btn-link2:hover .fa-linkedin {
+    color: black;
+}
+.fa-linkedin {
+    color: rgb(0, 162, 255);
+    margin: 5px;
+    transition: all .3s ease-in 0s;
+}
+/* end Button linked in styling */
+
+
+/* start portrait section */
+#portrait{
+    background-color: var(--second-color);
+    margin: 0;
+}
+#portrait h1 {
+    display: block;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: var(--fourth-color);
+    left: 50%;
+    z-index: 3;
+    margin: 15px 428px;
+}
+
+
+
+
+.imageGallery {
+    display: grid;
+    position: relative;
+
+
+    margin: 15px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+    
+    z-index: 2;
+}
+
+.imageGallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    background-color: var(--main-color);
+    transition: all .3s ease-in-out 0s;
+}
+.imageGallery img:hover {
+    opacity: .5;
+}
+/* .imageGallery img:hover + .overlay1 {
+    display: block;
+} */
+/* .overlay1 {
+    display: none;
+    width: 481px;
+    height: 400px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #00C9A6;
+    z-index: 3;
+    opacity: .3;
+    transition: all .3s;
+} */
+
+
+
+/* End portrait section */
