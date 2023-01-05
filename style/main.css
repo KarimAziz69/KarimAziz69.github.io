@@ -1,0 +1,534 @@
+/* start global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+:root {
+    --main-color: #00C9A6;
+    --second-color: #27242B;
+    --third-color: #545058;
+    --fourth-color: #FAEAFF;
+    --gap: 20px;
+    --num-cols: 4;
+    --row-height: 400px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #27242B;
+    font-family: 'Roboto', sans-serif;
+}
+/* end global rules */
+
+
+
+/* start navigation bar */
+.nav-bar {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    display: flex;
+    position: fixed;
+    margin-top: 26px;
+    padding: 15px;
+    width: 100%;
+    height: 60px;
+    z-index: 1030;
+}
+.active {
+    border-bottom: 1px solid var(--fourth-color);
+}
+.logo {
+    position: relative;
+    bottom: 4px;
+    height: 40px;
+    display: inline-block;
+    background-color: var(--fourth-color);
+    transition: .2s;
+}
+.logo img {
+    width: 50px;
+}
+.logo:hover {
+    opacity: .5;
+}
+.nav-bar .links li {
+    padding: 7px;
+    display: inline-block;
+    justify-content: space-around;
+    text-shadow: 0 0 10px var(--second-color);
+}
+.nav-bar .links {
+    left: 30px;
+    position: relative;
+}
+.nav-bar .links li a {
+    list-style: none;
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 0 15px 0 15px;
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-weight: 700;
+    transition: .2s ease-in-out;
+}
+.nav-bar .links li:hover a {
+    color: #00c9a7b9;
+    letter-spacing: 1px;
+}
+/* end navigation bar */
+
+
+
+
+/* start landing page */
+#home {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 499px;
+    background-color: var(--third-color);
+    z-index: 1;
+}
+.img{
+    background-image: url(../imgs/Dustin+vs+Claudio_.jpg);
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    z-index: 2;
+    margin: 0;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(33, 31, 35, 0.569);
+    z-index: 3;
+}
+.titles h1 {
+    position: absolute;
+    font-size: 100px;
+    font-style: italic;
+    color: var(--main-color);
+    z-index: 4;
+    text-align: center;
+    top: 0;
+    left: 170px;
+    margin: 155px 0;
+    padding: 5px;
+    text-transform: capitalize;
+    cursor: default;
+}
+/* end landing page */
+
+
+
+/* start Button styling */
+.btn-link1 {
+    position: relative;
+    text-decoration: none;
+    width: 140px;
+    height: 50px;
+    top: 336px;
+    z-index: 5;
+    left: 336px;
+    margin: -26px;
+}
+.btn-link1 a{
+    position: absolute;
+    width: 0;
+    text-decoration: none;
+}
+.button-86 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: var(--third-color);
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.button-86::after,
+.button-86::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+.button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: var(--fourth-color);
+    border-radius: 10px;
+}
+.button-86::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+.button-86:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+    background-color: var(--main-color);
+}
+.button-86:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+.button-86:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+.button-86:hover span {
+    transform: translateY(6px);
+}
+.button-86:hover .fa-instagram {
+    transform: translateY(6px);
+}
+.btn-link1 a span {
+    font-weight: bold;
+    transition: all .4s;
+}
+.btn-link1:hover a span {
+    color: black;
+}
+.btn-link1:hover .fa-instagram {
+    color: black;
+}
+.fa-instagram {            /* instagram font awesome icon */
+    color: rgb(120, 5, 221);
+    margin: 5px;
+    transition: all .4s;
+}
+/* end Button instagram styling */
+
+
+
+/* start Button linked in styling */
+.btn-link2 {
+    position: relative;
+    text-decoration: none;
+    width: 140px;
+    height: 50px;
+    top: 312px;
+    z-index: 5;
+    left: 577px;
+    margin: -26px;
+}
+.btn-link2 a{
+    position: absolute;
+    width: 0;
+    text-decoration: none;
+}
+.button-87 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: var(--third-color);
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.button-87::after,
+.button-87::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+.button-87::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background-color: var(--fourth-color);
+    border-radius: 10px;
+}
+.button-87::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+.button-87:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+    background: var(--main-color);
+}
+.button-87:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+.button-87:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+.button-87:hover span {
+    transform: translateY(6px);
+}
+.button-87:hover .fa-linkedin {
+    transform: translateY(6px);
+}
+.btn-link2 a span {
+    font-weight: bold;
+    transition: all .4s;
+}
+.btn-link2:hover a span {
+    /* font-weight: bold; */
+    color: black;
+}
+.btn-link2:hover .fa-linkedin {
+    color: black;
+}
+.fa-linkedin {               /* linkedin font awesome icon */
+    color: rgb(0, 162, 255);
+    margin: 5px;
+    transition: all .4s;
+}
+/* end Button linked in styling */
+
+
+
+
+
+/* start portrait section */
+#portrait{
+    background-color: rgb(67, 64, 72);
+    margin: 0;
+    overflow: hidden;
+}
+.background-1 {
+    position: absolute;
+    width: 100%;
+    height: 922px;
+    margin-bottom: 80px;
+}
+.container {
+    position: relative;
+    width: 100%;
+    bottom: 75px;
+    z-index: 1;
+}
+#portrait h1 {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 40px;
+    color: var(--fourth-color);
+    z-index: 3;
+    margin: 11px 428px;
+}
+#portrait h1 {
+    padding: 0 5px;
+    background-color: var(--second-color);
+    border: 3px solid var(--fourth-color);
+    border-radius: 3% 98% 3% 97% / 88% 13% 87% 2%;
+    cursor: default;
+    transition: all .3s;
+}
+#portrait h1 span {
+    color: var(--main-color);
+    transition: all .3s;
+}
+#portrait h1:hover {
+    color: var(--main-color);
+}
+#portrait h1:hover span{
+    color: var(--fourth-color);
+}
+.imageGallery {
+    display: grid;
+    position: relative;
+    margin: 7px 7px 50px 7px;
+    box-sizing: border-box;
+    padding: var(--gap) var(--gap) 0 var(--gap);
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+    z-index: 2;
+}
+.imageGallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    background-color: var(--main-color);
+    transition: all .3s ease-in-out 0s;
+}
+.imageGallery img:hover {
+    opacity: .5;
+}
+/* End portrait section */
+
+
+
+
+
+
+
+/* start contact section */
+
+#contact {
+    overflow: hidden;
+}
+
+.backgroundContact {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1050' height='1000' preserveAspectRatio='none' viewBox='0 0 1050 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1840%26quot%3b)' fill='none'%3e%3crect width='1050' height='1000' x='0' y='0' fill='url(%23SvgjsLinearGradient1841)'%3e%3c/rect%3e%3cpath d='M0 0L273.06 0L0 497.33z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 497.33L273.06 0L443.18 0L0 525.15z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 525.15L443.18 0L584.66 0L0 568.4399999999999z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 568.4399999999999L584.66 0L793.81 0L0 768.3799999999999z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1050 1000L577.99 1000L1050 865.42z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1050 865.42L577.99 1000L396.04 1000L1050 839.9599999999999z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1050 839.96L396.03999999999996 1000L387.18999999999994 1000L1050 404.33000000000004z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1050 404.3299999999999L387.18999999999994 1000L293.86999999999995 1000L1050 396.9799999999999z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1840'%3e%3crect width='1050' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='50%25' y1='100%25' x2='50%25' y2='0%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1841'%3e%3cstop stop-color='rgba(29%2c 28%2c 31%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(56%2c 53%2c 61%2c 1)' offset='0.31'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+
+.contactTitle {
+    display: block;
+    position: absolute;
+    left: 276.5px;
+    margin: 35px;
+    z-index: 3;
+}
+
+.contactTitle h1 {
+    color: var(--second-color);
+    font-size: 60px;
+    border: 3px solid var(--fourth-color);
+    background-color: var(--main-color);  
+    /* text-shadow: 0 0 5px white; */
+    border-radius: 2% 98% 3% 97% / 88% 13% 87% 12% ;
+    cursor: default;
+    transition: all .3s;
+}
+.contactTitle:hover h1 {
+    border: 3px solid var(--main-color);
+    background-color: var(--fourth-color);
+}
+
+.contentContact {
+    display: block;
+    position: relative;
+    background: linear-gradient(159deg, rgb(250, 233, 254) 0%, rgb(180, 168, 182) 76%, rgb(149, 139, 151) 100%);
+    width: 90%;
+    height: 300px;
+    z-index: 2;
+    top: 140px;
+    margin: 40px 50px;
+    border-radius: 3px;
+    padding: 5px;
+    box-shadow: 10px 15px 50px var(--second-color), 5px 10px 25px black;
+    transition: all 0.5s ease 0s;
+}
+.contentContact:hover {
+    transform: translateY(-10px);
+}
+.contentContact svg {
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    opacity: 61%;
+}
+
+.content {
+    position: relative;
+    margin: 10px;
+    z-index: 999;
+}
+.content h2 {
+    text-transform: capitalize; 
+} 
+.content p {
+    margin-top: 5px;
+    line-height: 23px;
+    font-weight: 400;
+}
+.walbert {
+    background-color: var(--main-color);
+    color: var(--fourth-color);
+    font-weight: bold;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    padding: 5px;
+}
+.content a {
+    text-decoration: none;
+    color: black;
+}
+.fa-inbox {
+    position: relative;
+    display: inline-block;
+    color: var(--second-color);
+    font-size: 20px;
+}
+.email {
+    margin: 17px 0;
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.365);
+    font-weight: bold;
+}
+.linkedin .fa-linkedin {
+    margin: 30px 0;
+    position: relative;
+    display: inline-block;
+    color: rgb(11, 161, 252);
+    font-size: 20px;
+}
+.linkedin {
+    margin: 30px 0;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.linkedin a span{
+    cursor: pointer;
+    transition: all .3s;
+}
+.linkedin a:hover span {
+    transform: translateY(-4px);
+    color: rgb(28, 126, 196);
+}
+
+/* end contact section */
